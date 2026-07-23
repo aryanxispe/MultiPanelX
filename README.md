@@ -71,7 +71,7 @@ MultiPanelX stands out from other standard reseller panels by offering a bespoke
 Integrate MultiPanelX directly into your Android C++ Mod Menu, Java Injector, Python Script, or C# Desktop App. The built-in REST API handles device binding and time validation automatically.
 
 ### Verify a License Key
-**Endpoint:** `GET /api.php`
+**Endpoint:** `GET /api`
 
 **Parameters:**
 - `action` (required): Must be `verify`
@@ -80,7 +80,7 @@ Integrate MultiPanelX directly into your Android C++ Mod Menu, Java Injector, Py
 
 **Example Request (cURL):**
 ```bash
-curl "https://yourdomain.com/api.php?action=verify&key=ARY-ABCD-1234&device_id=d41d8cd98f00b204e9800998ecf8427e"
+curl "https://yourdomain.com/api?action=verify&key=ARY-ABCD-1234&device_id=d41d8cd98f00b204e9800998ecf8427e"
 ```
 
 **Successful JSON Response (200 OK):**
