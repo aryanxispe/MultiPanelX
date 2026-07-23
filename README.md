@@ -167,7 +167,7 @@ Feel free to check the [Issues page](https://github.com/aryanxispe/MultiPanelX/i
 
 ## 📜 License & Disclaimer
 
-MultiPanelX is distributed under the **MIT License**. See `LICENSE` for more information. 
+MultiPanelX is distributed under the **MIT License**. See [LICENSE](LICENSE) for more information. 
 
 *Disclaimer: This software is provided for educational and software licensing purposes. The developers of MultiPanelX are not responsible for the misuse of this platform to distribute malicious software or violate third-party Terms of Service.*
 
