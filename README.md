@@ -10,7 +10,8 @@
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
   <br>
-  [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+iJzQJhMZ4qA2ZmM1)
+  [![Telegram Channel](https://img.shields.io/badge/Telegram_Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/+iJzQJhMZ4qA2ZmM1)
+  [![Telegram Admin](https://img.shields.io/badge/Telegram_Admin-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ARYANISPE)
   [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@aryanispe)
   [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/aryanispe/)
   [![Hosting](https://img.shields.io/badge/Web_Hosting-FF6B6B?style=for-the-badge&logo=google-cloud&logoColor=white)](https://aryanispehost.in/)
@@ -137,6 +138,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <div align="center">
   <b>MultiPanelX</b> was created with ❤️ by <a href="https://github.com/aryanxispe">aryanxispe</a><br><br>
   💬 <b>Join Community:</b> <a href="https://t.me/+iJzQJhMZ4qA2ZmM1">Telegram Channel</a><br>
+  💬 <b>Contact Admin:</b> <a href="https://t.me/ARYANISPE">@ARYANISPE on Telegram</a><br>
   ▶️ <b>Subscribe:</b> <a href="https://www.youtube.com/@aryanispe">YouTube Channel</a><br>
   📸 <b>Follow:</b> <a href="https://www.instagram.com/aryanispe/">Instagram</a><br>
   🌐 <b>Need Reliable Hosting?</b> Check out <a href="https://aryanispehost.in/">AryanispeHost.in</a>
