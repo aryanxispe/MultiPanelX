@@ -1,1 +1,0 @@
-<?php $key = ["id"=>1, "license_key"=>"abc", "duration"=>30, "duration_type"=>"days", "price"=>99.00]; echo "<button onclick=\"openEditModal(" . htmlspecialchars(json_encode($key), ENT_QUOTES, "UTF-8") . ")\">"; ?>
