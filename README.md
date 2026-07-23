@@ -3,7 +3,7 @@
   
   # MultiPanelX 🎮
   
-  **The Ultimate Open-Source Mod Panel & Key Selling Platform**
+  **The Ultimate Open-Source Mod Panel & Software License Selling Platform**
   
   [![PHP Version](https://img.shields.io/badge/PHP-8.0+-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
   [![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com/)
@@ -19,124 +19,161 @@
 
 <br/>
 
-MultiPanelX is a high-performance, fully-featured mod panel designed for selling mod APKs, game hacks, and premium software licenses. It features a complete automated UPI payment flow, admin approval system, user wallets, and referral rewards—all wrapped in a stunning, modern UI with built-in Dark Mode.
+**MultiPanelX** is an advanced, self-hosted, open-source mod panel and digital key distribution system built with PHP and MySQL. Designed for mod developers, game hackers, and software creators, it provides a complete end-to-end infrastructure for selling mod APKs, ESP tools, game scripts, and premium software licenses securely.
+
+With a fully integrated **Indian UPI Payment Gateway System** (Manual/QR-based), automated license key generation, and a robust REST API for client-side device validation, MultiPanelX empowers you to launch your own software monetization platform in minutes.
 
 ---
 
-## ✨ Key Features
+## 🚀 Why Choose MultiPanelX? (SEO & Architecture)
 
-### 🛡️ Admin Superpowers
-- **Mod Management** — Add, edit, and organize your mods with custom descriptions and features.
-- **Dynamic Pricing Plans** — Create custom plans (Hours, Days, Months) for each mod.
-- **License Generator** — Automatically or manually generate license keys.
-- **Order Approvals** — Review user UPI payments and approve/reject with a single click.
-- **User Management** — Track users, view balances, and manage access.
-- **Site Settings** — Update branding (Name, Logo, Telegram link, UPI ID) directly from the panel.
-- **Revenue Tracking** — Dedicated transactions and history dashboards.
+MultiPanelX stands out from other standard reseller panels by offering a bespoke architecture tailored specifically for digital software distribution:
 
-### 👤 User Experience
-- **Sleek Dashboard** — Track active licenses, wallet balance, and order history.
-- **Wallet System** — Add funds to a digital wallet for seamless checkout.
-- **UPI Integration** — Built-in UPI QR code generator for manual/semi-automated payments.
-- **Refer & Earn** — Built-in referral system to boost organic growth.
-- **Dark/Light Mode** — Premium, responsive UI that looks beautiful on any device.
-
-### 🔌 Developer API
-- **Key Validation Endpoint** — Integrate your mods directly with the panel using the built-in REST API to check key validity, duration, and device binding.
+- **Zero-Dependency Core:** Built using vanilla PHP 8 and PDO, ensuring lightning-fast execution and maximum compatibility with shared hosting providers like cPanel, CyberPanel, and Hostinger.
+- **RESTful Validation API:** A highly optimized `api.php` endpoint designed to handle hundreds of concurrent requests from your Mod Menus, Android Injectors, or PC Software to validate keys and lock them to specific Hardware IDs (HWID/Device ID).
+- **Tailwind UI/UX:** The frontend is crafted using utility-first CSS (Tailwind), ensuring a 100% responsive, mobile-first experience with an ultra-premium Glassmorphism design and native Dark Mode support.
+- **Bypass 3rd-Party Gateway Fees:** By utilizing a direct UPI QR code generation system based on user-inputted UTR/Transaction IDs, you bypass heavy payment gateway fees (Razorpay, Stripe, PayU) and receive payments directly to your bank account with 0% commission.
 
 ---
 
-## 📸 Screenshots
+## ✨ Comprehensive Feature List
 
-*(Add your screenshots here)*
+### 🛡️ Admin Superpowers (Dashboard)
+- **Mod Management Engine:** Add, edit, and organize unlimited mods. Upload Mod APK files directly to the server, define feature lists, and set version numbers.
+- **Dynamic Pricing Plans:** Create modular subscription plans for each mod. Support for dynamic durations: **Hours, Days, and Months**.
+- **Automated License Generator:** Generate bulk license keys assigned to specific mods and durations. Track whether keys are `Available`, `Sold`, `Expired`, or `Blocked`.
+- **Order Approvals (UPI Workflow):** Review user payment submissions (Transaction IDs), cross-verify with your bank app, and click "Approve" to instantly auto-assign a license key to the buyer.
+- **User Management & Analytics:** Track user registrations, monitor individual wallet balances, view login history, and manage access roles.
+- **Global Site Configuration:** Update site branding (Panel Name, Tagline, Telegram links, Support Email, and Admin UPI ID) directly from the UI without touching the code.
+- **Transaction Ledger:** A dedicated financial dashboard tracking all deposits, purchases, and refunds.
+
+### 👤 User Experience (Client Portal)
+- **Sleek Client Dashboard:** Users can track their active software licenses, remaining duration, wallet balance, and order status at a glance.
+- **Digital Wallet System:** Users can top-up their digital wallet via UPI for frictionless, one-click checkouts on future purchases.
+- **Refer & Earn (Affiliate System):** Built-in referral system. Users get unique referral codes to invite friends, driving organic SEO and community growth for your panel.
+- **Seamless UPI Integration:** Built-in UPI intent and dynamic QR code generation. Users simply scan, pay, and enter their 12-digit UTR/Txn ID.
+- **Native Dark/Light Mode:** A persistent theme toggle that respects user preferences across sessions.
+
+---
+
+## 📸 Interface Preview
+
+*(Upload your screenshots to GitHub and link them here)*
 <!-- Example:
-![Dashboard](https://example.com/dashboard.png)
-![Payment Flow](https://example.com/payment.png)
+![Admin Dashboard](https://example.com/admin-dashboard.png)
+![User Store](https://example.com/user-store.png)
 -->
 
 ---
 
-## 🚀 Quick Start / Installation
+## 🔌 Developer API Documentation (Key Validation)
 
-### Prerequisites
-- Web Server (Apache/LiteSpeed recommended for `.htaccess`)
-- PHP 8.0 or higher
-- MySQL 5.7+ / MariaDB 10.4+
-- PDO PHP Extension enabled
+Integrate MultiPanelX directly into your Android C++ Mod Menu, Java Injector, Python Script, or C# Desktop App. The built-in REST API handles device binding and time validation automatically.
 
-### Step 1: Upload & Extract
-1. Download the latest source code from the repository.
-2. Upload the files to your web server's `public_html` or desired directory.
+### Verify a License Key
+**Endpoint:** `GET /api.php`
 
-### Step 2: Database Setup
-1. Create a new MySQL Database and User in your hosting panel (e.g., cPanel).
-2. Open **phpMyAdmin** and select your newly created database.
-3. Import the provided `database.sql` file.
+**Parameters:**
+- `action` (required): Must be `verify`
+- `key` (required): The license key string.
+- `device_id` (required): The unique hardware ID of the user's device (e.g., Android Settings Secure ID, PC Mac Address).
 
-### Step 3: Configuration
-1. Open `config/database.php` in a text editor.
-2. Replace the placeholder credentials with your actual database details:
-   ```php
-   define('DB_HOST', 'localhost');
-   define('DB_USER', 'YOUR_DB_USERNAME');
-   define('DB_PASS', 'YOUR_DB_PASSWORD');
-   define('DB_NAME', 'YOUR_DB_NAME');
-   ```
+**Example Request (cURL):**
+```bash
+curl "https://yourdomain.com/api.php?action=verify&key=ARY-ABCD-1234&device_id=d41d8cd98f00b204e9800998ecf8427e"
+```
 
-### Step 4: Login & Secure
-1. Navigate to your website's `/login` page.
-2. Login using the default admin credentials:
-   - **Username:** `admin`
-   - **Password:** `admin123`
-3. **⚠️ CRITICAL:** Immediately go to your Profile and change the admin password!
+**Successful JSON Response (200 OK):**
+```json
+{
+  "status": "success",
+  "message": "Valid key",
+  "mod_id": 1,
+  "mod_name": "PUBGM ESP Hack",
+  "expires_at": "2024-12-31 23:59:59",
+  "device_id": "d41d8cd98f00b204e9800998ecf8427e"
+}
+```
 
-### Step 5: Configure UPI
-1. Go to **Admin Panel → Site Settings**.
-2. Enter your real UPI ID so users can pay you.
-3. Save changes. You're ready to sell! 💰
-
----
-
-## 📡 API Documentation (For Mod Developers)
-
-MultiPanelX comes with a validation API to check keys from inside your Android/PC mods. 
-Access the full documentation from your admin panel at `/docs`.
-
-**Example Validation Request:**
-```http
-GET /api.php?action=verify&key=YOUR_LICENSE_KEY&device_id=UNIQUE_DEVICE_ID
+**Error JSON Response (403 Forbidden):**
+```json
+{
+  "status": "error",
+  "message": "Device ID mismatch. Key is already bound to another device."
+}
 ```
 
 ---
 
-## 🛠️ Tech Stack
-- **Backend:** PHP 8 (Vanilla)
-- **Database:** MySQL / MariaDB (PDO)
-- **Styling:** Vanilla CSS / Tailwind utilities (pre-compiled)
-- **Icons:** Phosphor Icons / FontAwesome
+## 🚀 Quick Start / Installation Guide
+
+### Server Requirements
+- Operating System: Linux (Ubuntu/CentOS/CloudLinux) or Windows
+- Web Server: Apache or LiteSpeed (Must support `.htaccess` for URL routing)
+- PHP Version: 8.0, 8.1, or 8.2
+- Database: MySQL 5.7+ or MariaDB 10.4+
+- Required PHP Extensions: `pdo_mysql`, `mbstring`, `json`, `cURL`
+
+### Installation Steps
+
+#### Step 1: Upload & Extract
+1. Download the latest `MultiPanelX.zip` from the [Releases](https://github.com/aryanxispe/MultiPanelX/releases) page.
+2. Upload the ZIP file to your web server's `public_html` directory using cPanel File Manager or FTP.
+3. Extract the contents.
+
+#### Step 2: Database Initialization
+1. Login to your hosting control panel (cPanel).
+2. Go to **MySQL Databases** and create a new database and a new user. Assign all privileges.
+3. Open **phpMyAdmin**, select your newly created database, and click the **Import** tab.
+4. Upload the provided `database.sql` file to build the schema structure.
+
+#### Step 3: Database Configuration
+1. In your File Manager, open the file `config/database.php`.
+2. Replace the placeholder constants with your actual database credentials:
+   ```php
+   define('DB_HOST', 'localhost'); // Usually localhost
+   define('DB_USER', 'your_db_username');
+   define('DB_PASS', 'your_db_password');
+   define('DB_NAME', 'your_db_name');
+   ```
+
+#### Step 4: Login & Secure Your Panel
+1. Navigate to your website's `/login` page in your web browser.
+2. Login using the default superadmin credentials:
+   - **Username:** `admin`
+   - **Password:** `admin123`
+3. **⚠️ CRITICAL SECURITY STEP:** Immediately navigate to your **Profile** and change the admin password to a strong, secure phrase.
+
+#### Step 5: Configure UPI Payments
+1. Go to **Admin Panel → Site Settings**.
+2. Scroll to the **Payment Settings (UPI)** section.
+3. Enter your real UPI ID (e.g., `yourname@oksbi`) so users can pay you directly.
+4. Save changes. You are now ready to monetize your software! 💰
 
 ---
 
-## 🤝 Contributing
+## 🤝 Contributing & Support
 
-Contributions, issues, and feature requests are welcome! 
-Feel free to check [issues page](https://github.com/aryanxispe/MultiPanelX/issues).
+MultiPanelX is an open-source project driven by the community. Contributions, bug reports, and feature requests are highly encouraged! 
+Feel free to check the [Issues page](https://github.com/aryanxispe/MultiPanelX/issues).
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Fork the Project on GitHub.
+2. Create your Feature Branch (`git checkout -b feature/EpicNewFeature`).
+3. Commit your Changes (`git commit -m 'Add some EpicNewFeature'`).
+4. Push to the Branch (`git push origin feature/EpicNewFeature`).
+5. Open a Pull Request for review.
 
 ---
 
-## 📜 License
+## 📜 License & Disclaimer
 
-Distributed under the MIT License. See `LICENSE` for more information.
+MultiPanelX is distributed under the **MIT License**. See `LICENSE` for more information. 
+
+*Disclaimer: This software is provided for educational and software licensing purposes. The developers of MultiPanelX are not responsible for the misuse of this platform to distribute malicious software or violate third-party Terms of Service.*
 
 ---
 <div align="center">
-  <b>MultiPanelX</b> was created with ❤️ by <a href="https://github.com/aryanxispe">aryanxispe</a><br><br>
+  <b>MultiPanelX</b> was engineered with ❤️ by <a href="https://github.com/aryanxispe">aryanxispe</a><br><br>
   💬 <b>Join Community:</b> <a href="https://t.me/+iJzQJhMZ4qA2ZmM1">Telegram Channel</a><br>
   💬 <b>Contact Admin:</b> <a href="https://t.me/ARYANISPE">@ARYANISPE on Telegram</a><br>
   ▶️ <b>Subscribe:</b> <a href="https://www.youtube.com/@aryanispe">YouTube Channel</a><br>
