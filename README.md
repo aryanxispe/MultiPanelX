@@ -9,6 +9,9 @@
   [![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
   [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+  <br>
+  [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/ARYANISPE)
+  [![Hosting](https://img.shields.io/badge/Web_Hosting-FF6B6B?style=for-the-badge&logo=google-cloud&logoColor=white)](https://aryanispehost.in/)
 </div>
 
 <br/>
@@ -130,5 +133,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 <div align="center">
-  Made with ❤️ by <a href="https://github.com/aryanxispe">aryanxispe</a>
+  <b>MultiPanelX</b> was created with ❤️ by <a href="https://github.com/aryanxispe">aryanxispe</a><br><br>
+  💬 <b>Join Community:</b> <a href="https://t.me/ARYANISPE">@ARYANISPE on Telegram</a><br>
+  🌐 <b>Need Reliable Hosting?</b> Check out <a href="https://aryanispehost.in/">AryanispeHost.in</a>
 </div>
