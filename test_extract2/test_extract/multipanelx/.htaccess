@@ -1,0 +1,18 @@
+# Disable directory browsing/indexing
+Options -Indexes
+
+# Redirect 403 (Forbidden) and 404 (Not Found) to custom 404 page
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+
+# Enable URL rewriting
+RewriteEngine On
+
+# 1. Redirect client requests from /page.php to /page (External Redirect)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^.]+)\.php [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 2. Map clean URL requests /page internally to /page.php if the file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
